@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Animated Debit Card</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card-container">
+            <div class="card" id="debitCard">
+                <div class="card-front">
+                    <h2 class="card-title">Debit Card</h2>
+                    <div class="card-number" id="cardNumber">**** **** **** ****</div>
+                    <div class="card-details">
+                        <div class="card-holder" id="cardHolder">Card Holder</div>
+                        <div class="expiry-date" id="expiryDate">MM/YY</div>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <div class="magnetic-stripe"></div>
+                    <div class="signature-area">Signature</div>
+                    <div class="cvv" id="cvv">***</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group mt-4">
+            <input type="text" class="form-control" id="inputCardNumber" placeholder="Enter Card Number" maxlength="19">
+            <input type="text" class="form-control mt-2" id="inputCardHolder" placeholder="Card Holder Name">
+            <input type="text" class="form-control mt-2" id="inputExpiryDate" placeholder="Expiry Date (MM/YY)">
+            <input type="text" class="form-control mt-2" id="inputCvv" placeholder="CVV" maxlength="3">
+            <button class="btn btn-primary mt-3" id="updateCardBtn">Update Card</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
